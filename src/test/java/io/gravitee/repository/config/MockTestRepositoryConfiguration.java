@@ -187,4 +187,9 @@ public class MockTestRepositoryConfiguration {
     public WorkflowRepositoryMock workflowRepository() throws Exception {
         return new WorkflowRepositoryMock();
     }
+    
+    @Bean
+    public EnvironmentRepositoryMock environmentRepository() throws Exception {
+        return new EnvironmentRepositoryMock();
+    }
 }

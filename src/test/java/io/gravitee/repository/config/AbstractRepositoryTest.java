@@ -123,6 +123,8 @@ public abstract class AbstractRepositoryTest {
     protected ClientRegistrationProviderRepository clientRegistrationProviderRepository;
     @Inject
     protected WorkflowRepository workflowRepository;
+    @Inject
+    protected EnvironmentRepository environmentRepository;
 
     private ObjectMapper mapper = new ObjectMapper();
 
@@ -244,6 +246,9 @@ public abstract class AbstractRepositoryTest {
         }
         else if (object instanceof Workflow) {
             workflowRepository.create((Workflow) object);
+        }
+        else if (object instanceof Environment) {
+            environmentRepository.create((Environment) object);
         }
     }
 
